@@ -11,21 +11,22 @@
 https://github.com/JSegoviaa/code_challenge
 ```
 
+2. Crear un .env dentro del directorio backend y copiar lo que tiene .env.example
 
-2. Levantar la base de datos:
+
+3. Abrimos una terminal en el directorio del proyecto y procedemos a levantar la base de datos:
 
 ```
 $ cd backend 
 
 $ docker comopse up -d
 
-$ python seed.py
 ```
-Esto te posiciona sobre el backend, levanta la base de datos localmente y ejecuta el seed para llenar la base de datos
+Esto te posiciona sobre el backend, levanta la base de datos localmente
 
 
 
-3. Levantar en modo desarrollo el backend
+4. Levantar en modo desarrollo el backend
 
 
 
@@ -33,9 +34,11 @@ Esto te posiciona sobre el backend, levanta la base de datos localmente y ejecut
 ```
 $ python -m venv venv
 
-$ source/venv/Scripts/activate
+$ source venv/Scripts/activate
 
 $ pip install -r requirements
+
+$ python seed.py
 
 $ fastapi dev app/main.py
 
@@ -44,14 +47,13 @@ $ fastapi dev app/main.py
 Esto crea un entorno virtual, instala las librerías que necesita y se ejecuta en modo local el backend
 
 
-4. Levantar el frontend en modo desarrollo
+5. Levantar el frontend en modo desarrollo
 
+Abrimos una terminal sobre el directorio frontend.
 Primero tenemos que crear un archivo .env dentro de la carpeta frontend. Copiamos y pegamos lo que tiene .env.example
 Luego ejecutamos los siguientes comandos:
 
 ```
-$ cd ../frontend
-
 $ npm install
 
 $ npm run dev
