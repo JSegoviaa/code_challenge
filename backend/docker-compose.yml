@@ -1,0 +1,14 @@
+
+services:
+  pg:
+    image: postgres:17.2
+    restart: always
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+      PGDATA: /var/lib/postgresql/data/pgdata
+    container_name: prueba-tecnica
+    volumes:
+      - ./postgres:/var/lib/postgresqls
